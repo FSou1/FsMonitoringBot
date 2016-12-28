@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{B9969202-015B-42D9-88B9-B080D532EECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FsTelegramMonitoringBot", "FsTelegramMonitoringBot\FsTelegramMonitoringBot.csproj", "{29E539FC-20B5-471E-A1B8-0E7F2F47B723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFD447C3-5B01-44B0-BEAE-7A2892ACEF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageHandlers", "MessageHandlers\MessageHandlers.csproj", "{1456C436-79BA-4026-95A5-8D1AE209D0B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E539FC-20B5-471E-A1B8-0E7F2F47B723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E539FC-20B5-471E-A1B8-0E7F2F47B723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E539FC-20B5-471E-A1B8-0E7F2F47B723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E539FC-20B5-471E-A1B8-0E7F2F47B723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1456C436-79BA-4026-95A5-8D1AE209D0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1456C436-79BA-4026-95A5-8D1AE209D0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1456C436-79BA-4026-95A5-8D1AE209D0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1456C436-79BA-4026-95A5-8D1AE209D0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29E539FC-20B5-471E-A1B8-0E7F2F47B723} = {B9969202-015B-42D9-88B9-B080D532EECA}
+		{1456C436-79BA-4026-95A5-8D1AE209D0B8} = {CFD447C3-5B01-44B0-BEAE-7A2892ACEF51}
+	EndGlobalSection
+EndGlobal
