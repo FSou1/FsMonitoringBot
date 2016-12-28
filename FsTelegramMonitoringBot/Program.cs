@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Linq;
 using MessageHandlers;
 
 namespace FsTelegramMonitoringBot
@@ -44,6 +45,7 @@ namespace FsTelegramMonitoringBot
                 var botApiKey = Settings.BotApiKey;
                 if (string.IsNullOrEmpty(Settings.BotApiKey))
                 {
+                    Console.WriteLine(Environment.NewLine);
                     Console.WriteLine("Enter your telegram bot api key:");
                     botApiKey = Console.ReadLine();
                 }
@@ -56,6 +58,7 @@ namespace FsTelegramMonitoringBot
                 var chatIds = Settings.ChatIds;
                 if (chatIds.Length == 0)
                 {
+                    Console.WriteLine(Environment.NewLine);
                     Console.WriteLine("Enter your telegram chat ids (separator ','):");
                     chatIds = Console.ReadLine().Split(',');
                 }
@@ -68,6 +71,7 @@ namespace FsTelegramMonitoringBot
                 var serviceNames = Settings.TrackingWindowsServices;
                 if (serviceNames.Length == 0)
                 {
+                    Console.WriteLine(Environment.NewLine);
                     Console.WriteLine("Enter your service names (separator ','):");
                     serviceNames = Console.ReadLine().Split(',');
                 }

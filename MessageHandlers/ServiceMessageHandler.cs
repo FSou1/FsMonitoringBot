@@ -47,6 +47,8 @@ namespace MessageHandlers
         {
             try
             {
+                serviceName = serviceName.Trim();
+
                 var serviceController = new ServiceController(serviceName);
 
                 return serviceController.Format();
