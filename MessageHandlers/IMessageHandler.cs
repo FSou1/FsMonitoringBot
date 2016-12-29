@@ -4,6 +4,6 @@ namespace MessageHandlers
 {
     public interface IMessageHandler
     {
-        Task<string> HandleAsync();
+        Task<string> HandleAsync(string message);
     }
 }

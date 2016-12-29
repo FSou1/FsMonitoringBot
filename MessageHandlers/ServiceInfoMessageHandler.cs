@@ -8,14 +8,14 @@ using MessageHandlers.Properties;
 
 namespace MessageHandlers
 {
-    public class ServiceMessageHandler : IMessageHandler
+    public class ServiceInfoMessageHandler : IMessageHandler
     {
-        public ServiceMessageHandler(string[] trackingWindowsServices)
+        public ServiceInfoMessageHandler(string[] trackingWindowsServices)
         {
             _trackingWindowsServices = trackingWindowsServices;
         }
 
-        public async Task<string> HandleAsync()
+        public async Task<string> HandleAsync(string command)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace MessageHandlers
             }
             catch (Exception ex)
             {
-                return string.Format(Resources.ServiceMessageHandleException, ex.Message);
+                return string.Format(Resources.ServiceInfoMessageHandleException, ex.Message);
             }
         }
 

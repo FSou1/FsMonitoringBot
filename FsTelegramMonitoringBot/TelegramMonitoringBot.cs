@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using FsTelegramMonitoringBot.Extension;
-using MessageHandlers;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
@@ -16,12 +11,12 @@ namespace FsTelegramMonitoringBot
     {
         public TelegramMonitoringBot(
             string token, 
-            string[] chatIds, 
-            IMessageHandler svcMessageHandler
+            string[] chatIds,
+            MessageHandlerFactory handlerFactory
         ) : base(token)
         {
             _chatIds = chatIds;
-            _svcMessageHandler = svcMessageHandler;
+            _handlerFactory = handlerFactory;
 
             OnMessage += HandleMessageAsync;
         }
@@ -37,24 +32,13 @@ namespace FsTelegramMonitoringBot
 
         private async Task Dispatch(Message message)
         {
-            if (message.Text.Contains("/svc"))
-            {
-                await HandleServiceMessageAsync();
-            }
-            else
-            {
-                await this.SendMultipleMultiTextMessageExAsync(
-                    _chatIds, $"Unknown command: {message.Text}");
-            }
-        }
+            var command = message.Text;
+            var handler = _handlerFactory.CreateHandler(command);
 
-        private async Task HandleServiceMessageAsync()
-        {
-            var output = await _svcMessageHandler.HandleAsync();
-            await this.SendMultipleMultiTextMessageExAsync(_chatIds, output);
+            await this.SendMultipleMultiTextMessageExAsync(_chatIds, await handler.HandleAsync(command));
         }
 
         private readonly string[] _chatIds;
-        private readonly IMessageHandler _svcMessageHandler;
+        private readonly MessageHandlerFactory _handlerFactory;
     }
 }

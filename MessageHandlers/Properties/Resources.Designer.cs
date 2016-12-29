@@ -61,7 +61,7 @@ namespace MessageHandlers.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ❓ {0}: {1}.
+        ///   Looks up a localized string similar to Ошибка во время поиска службы {0}: {1}.
         /// </summary>
         internal static string GetServiceInfoException {
             get {
@@ -88,11 +88,11 @@ namespace MessageHandlers.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Блин, ошибка... Посмотришь? ({0}).
+        ///   Looks up a localized string similar to Блин, не получается информация о службе... Посмотришь? ({0}).
         /// </summary>
-        internal static string ServiceMessageHandleException {
+        internal static string ServiceInfoMessageHandleException {
             get {
-                return ResourceManager.GetString("ServiceMessageHandleException", resourceCulture);
+                return ResourceManager.GetString("ServiceInfoMessageHandleException", resourceCulture);
             }
         }
         

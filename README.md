@@ -9,4 +9,4 @@
 
 ## Result
 
-![Output result](/docs/FsTelegramBot_WorkingExample.png) 
+![Output result](/docs/FsTelegramBot_WorkingExample.png)

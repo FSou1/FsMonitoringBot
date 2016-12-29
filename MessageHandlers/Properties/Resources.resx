@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="GetServiceInfoException" xml:space="preserve">
-    <value>❓ {0}: {1}</value>
+    <value>Ошибка во время поиска службы {0}: {1}</value>
   </data>
   <data name="GetServiceInfoRunning" xml:space="preserve">
     <value>✅</value>
@@ -126,8 +126,8 @@
   <data name="GetServiceInfoStopped" xml:space="preserve">
     <value>❌</value>
   </data>
-  <data name="ServiceMessageHandleException" xml:space="preserve">
-    <value>Блин, ошибка... Посмотришь? ({0})</value>
+  <data name="ServiceInfoMessageHandleException" xml:space="preserve">
+    <value>Блин, не получается информация о службе... Посмотришь? ({0})</value>
   </data>
   <data name="ServiceMessageHandlerOutputHeader" xml:space="preserve">
     <value>Состояние сервисов на момент {0}:</value>

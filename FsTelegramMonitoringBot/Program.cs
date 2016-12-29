@@ -17,8 +17,13 @@ namespace FsTelegramMonitoringBot
 
             try
             {
+                var factory = new MessageHandlerFactory(
+                    new ServiceInfoMessageHandler(serviceNames), 
+                    new MissingMessageHandler()
+                );
+
                 bot = new TelegramMonitoringBot(
-                    botApiKey, chatIds, new ServiceMessageHandler(serviceNames)
+                    botApiKey, chatIds, factory
                 );
 
                 bot.StartReceiving();
